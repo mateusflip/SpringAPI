@@ -31,6 +31,15 @@ public class Topico {
 	@OneToMany(mappedBy="topico")
 	private List<Resposta> respostas = new ArrayList<>();
 
+	//O Spring JPA precisa necessariamente de um construtor default
+	public Topico() {}
+
+	public Topico(String titulo, String mensagem, Curso curso) {
+		super();
+		this.titulo = titulo;
+		this.mensagem = mensagem;
+		this.curso = curso;
+	}
 
 	@Override
 	public int hashCode() {
