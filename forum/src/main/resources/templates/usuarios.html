@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" th:href="@{~/css/usuario.css}"> 
+<title>Forum</title>
+</head>
+<body>
+
+<h1>Usuários</h1>
+
+	<ul th:each="usuario : ${usuario}">
+		<li>
+			<p th:text="${usuario.nome}"></p>
+			<p th:text="${usuario.email}"></p>
+			<p th:text="${usuario.senha}"></p>
+			<button>Pegar</button>
+		</li>
+	</ul>
+	
+</body>
+</html>
